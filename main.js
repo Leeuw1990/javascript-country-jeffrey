@@ -17,43 +17,55 @@
 //- [ ] axios.get(url)v
 //- [ ] await toevoegenvv
 //- [ ] response -> checkenv
-const ConnectButton = document.getElementById('search_button');
-const displayCountryInfo = document.getElementById('country_info_display');
+// const ConnectButton = document.getElementById('search_button');
+// const displayCountryInfo = document.getElementById('country_info_display');
+// ConnectButton.addEventListener('click', searchButton);
+// displayCountryInfo.appendChild(countryInfo);
+// const countryInfo = document.createElement("h1")
 
 async function searchButton () {
     const country = 'belgie';
     const url = `https://restcountries.eu/rest/v2/name/${country}?fullText=true`;
     const response = await axios.get(url);
-    console.log(response);
-    // console.log("Populatie", response.data[0].population)
-    // console.log("Naam Land", response.data[0].name)
-    // console.log("Subarea is", response.data[0].region)
-    for (const property in response.data[0]) {
-        //console.log("Wat komt hier?", response.data[0].name)
-        const countryInfo = document.createElement("h1")
-        countryInfo.textContent = ` ${response.data[0].name} ${ 'is situated in '} ${response.data[0].region}
-         ${'. It has a population of '} ${response.data[0].population} ${' people.'} ${'The capitol is '} ${response.data[0].capital}` ;
-        //console.log(countryInfo)
-        displayCountryInfo.appendChild(countryInfo);
-        if (response.data[0].currency === 0) {
-            console.log("Dit land heeft 1 betaal middel")
-        } else if (response.data[0].currency === 1) {
-            console.log("Dit land heeft 2 betaal middelen")
-        }
-        return;
-    }
-    //console.log("Buiten scope", response.data[0].name)
 
+    const Geografic = ` ${response.data[0].name} is situated in ${response.data[0].subregion} . It has a population of  ${(response.data[0].population /1000000)} people.`;
+    const city = `${'The capitol is '} ${response.data[0].capital}` ;
+    const currency = ` ${response.data[0].currency}`;
+    console.log(Geografic, city)
+
+const getNumberOfCurrency = formatCurrencies(currency)
 }
 const searchCountry = searchButton();
 
-ConnectButton.addEventListener('click', searchButton);
+function formatCurrencies(currencyArray) {
+    const currencyOne = currencyArray[0]
+    const currencyTwo = currencyArray[1]
 
-function OnecurrencyAndMore() {
-
-
-
+    if (currencyOne.length === 1) {
+        return `and you can pay with ${response.data[0].currency} `
+    } else if (currencyTwo >1) {
+        return `and you can pay with ${response.data[0].currency.length[0]}'s and ${response.data[0].currency.length[1]}'s`
+    }
 }
+
+
+
+
+
+// 4. Maak een functie die ongeacht het aantal currencies die in een land gebruikt worden, een string maakt. In een land kunnen één of twee currencies gebruikt worden:
+//     - 1 valuta: `and you can pay with [currency]'s`
+// - 2 valuta's: `and you can pay with [currency]'s and [currency]'s`
+// - [ ] Goed in de data kijken, waar zit deze info: -> loggen
+// - [ ] variabele maken, en de currencies uit de data daaraan toekennen
+// - [ ] functie maken -> formatCurrencies
+// - [ ] aanroepen -> logje in de functie zetten om te checken
+// - [ ] input: currencies, parameter(s) toevoegen, argument(en) meegeven
+// - [ ] parameter loggen om te kijken of de input hebben
+// - [ ] if
+// - [ ] 1 currency -> `and you can pay with [currency]'s`
+// - [ ] 2 currency -> `and you can pay with [currency]'s and [currency]'s`
+// - [ ] return de waarde `and you can pay with [currency]'s and [currency]'s`
+
 // 4. Maak een functie die ongeacht het aantal currencies die in een land gebruikt worden, een string maakt. In een land kunnen één of twee currencies gebruikt worden:
 //     * 1 valuta: `and you can pay with [currency]'s`
 // * 2 valuta's: `and you can pay with [currency]'s and [currency]'s`
