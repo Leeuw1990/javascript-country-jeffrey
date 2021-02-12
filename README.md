@@ -12,10 +12,10 @@ Je gaat dit doen met behulp van de REST Counties API. De documentatie over de ve
 kun je [hier](https://restcountries.eu/#api-endpoints-language) vinden. 
 
 ## Voor je begint
-1. Koppel jouw JavaScript bestand met de HTML pagina. Doe dit ook voor het CSS bestand.
-2. Maak een `package.json` aan met `npm init --yes`.
-3. Installeer de npm package `axios` met `npm install axios --save`.
-4. Zorg ervoor dat we toegang hebben tot deze package door `<script src="./node_modules/axios/dist/axios.min.js"></script>`
+1. Koppel jouw JavaScript bestand met de HTML pagina. Doe dit ook voor het CSS bestand.v
+2. Maak een `package.json` aan met `npm init --yes`.v
+3. Installeer de npm package `axios` met `npm install axios --save`.v
+4. Zorg ervoor dat we toegang hebben tot deze package door `<script src="./node_modules/axios/dist/axios.min.js"></script>`v
 aan onze HTML toe te voegen.
 4. Vergeet niet dat je bij iedere wijziging eerst moet opslaan en de browser moet refreshen. 
 `Nodemon` is niet meer nodig omdat we JavaScript nu in de browser gaan gebruiken (waar het voor bedoeld is)

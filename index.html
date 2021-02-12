@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+<link href="styles.css">
 <head>
+
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Country</title>
 </head>
 <body>
+<form class="knop">
+    <label>
+        <input type="text" placeholder="search" name="search">
+        <button type="button" id="search_button">Zoek</button>
+    </label>
+</form>
+
+<div id="country_info_display"></div>
 
 </body>
+<script src="./node_modules/axios/dist/axios.min.js"></script>
+<script src="main.js"></script>
 </html>
