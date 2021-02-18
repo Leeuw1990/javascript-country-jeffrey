@@ -37,7 +37,7 @@ _Tip:_ Als de de [documentatie](https://www.npmjs.com/package/axios) bekijkt en 
     * 2 talen: `They speak [language] and [language]` 
     * 3 talen: `They speak [language], [language] and [language]`
     * etc. 
-7. Zorg ervoor dat de opgehaalde data op de volgende manier wordt toegevoegd aan de DOM:
+7. Zorg ervoor dat de opgehaalde data op de volgende manier wordt toegevoegd aan de DOM:v
 
 ```
 [IMAGE: flag]
@@ -48,15 +48,15 @@ They speak [language], [language] and [language]
 ```
 
 8. Maak een inputveld op de pagina en zorg ervoor dat als de gebruiker op enter drukt, de functie wordt 
-aangeroepen waarmee de gegevens over `België` worden opgehaald. 
+aangeroepen waarmee de gegevens over `België` worden opgehaald. v
 
 9. Zorg ervoor dat de waarde uit het input veld wordt gebruikt als query voor het GET request. 
 Er moet alleen een request gedaan worden als de gebruiker op enter drukt, of op de zoek-knop klikt.
-_Tip:_ gebruik een globale variabele.
+_Tip:_ gebruik een globale variabele.v
 
-10. Zorg ervoor dat de waarde van het input veld wordt leeggemaakt na elke zoekopdracht.
+10. Zorg ervoor dat de waarde van het input veld wordt leeggemaakt na elke zoekopdracht. V
 
-11. Zorg ervoor dat er altijd maar één zoekresultaat op de pagina staat.
+11. Zorg ervoor dat er altijd maar één zoekresultaat op de pagina staat.v
 
 12. Zorg ervoor dat als er naar een land wordt gezocht dat niet bestaat, er een foutmelding in de DOM wordt gezet.
 _Tip:_ als er een ongeldige API call wordt gemaakt, zal de response in het `catch` blok terecht komen.
