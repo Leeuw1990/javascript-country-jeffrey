@@ -17,8 +17,9 @@
 //- [ ] axios.get(url)v
 
     //Opdracht 1.
+
 const connectButton = document.getElementById('search_button');
-connectButton.addEventListener('click', searchButton);
+connectButton.addEventListener('click', countryInformation);
 
     // Country info
 const info = document.getElementById('country_info_display');
@@ -29,9 +30,10 @@ const searchInput = document.getElementById('text_field')
 searchInput.addEventListener('keypress', handleKeypress)
 
     // Search to use the enter key
-function handleKeypress(event) {
-    if (event.code === "Enter") {
-        searchButton()
+function handleKeypress(e) {
+    if (e.code === "Enter") {
+        countryInformation();
+        e.preventDefault();
     }
 }
     //Opdracht 11
@@ -41,7 +43,7 @@ function clearInfo(remove) {
     }
 }
 
-async function searchButton() {
+async function countryInformation() {
     const inputElement = document.getElementById('text_field')
     const userInput = inputElement.value
 
@@ -54,17 +56,15 @@ async function searchButton() {
     try {
         const url = `https://restcountries.eu/rest/v2/name/${userInput}?fullText=true`;
         const response = await axios.get(url);
-        const countryData = response.data[0]
+        const {name , subregion, population, capital, currencies, languages, flag} = response.data[0];
 
         //Opdracht 2 t/m 7.
-        const geographic = ` ${countryData.name} is situated in ${countryData.subregion}. It has a population of  ${(countryData.population / 1000000)} people`;
-        const city = `${'. The capitol is '} ${countryData.capital}  `;
-        const currencies = countryData.currencies;
+        const geographic = ` ${name} is situated in ${subregion}. It has a population of  ${(population / 1000000)} people`;
+        const city = `${'. The capitol is '} ${capital}  `;
         const currenciesString = formatCurrencies(currencies);
-        const languages = countryData.languages;
         const languageString = getLanguage(languages);
         const countryInfo = geographic + city + currenciesString + languageString;
-        const displayFlag = countryData.flag;
+        const displayFlag = flag;
 
         // This shows all the country information.
         const countryDisplay = document.createElement('h3');
