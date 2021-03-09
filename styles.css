@@ -1,21 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
 
+/*body {*/
+/*    font-family: 'Lora', serif;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    padding: 50px;*/
+/*    !*background-image: url(./backgroundpicture/earth-country.jpg); *!*/
+/*    display: grid;*/
+/*    row-gap: 16px;*/
+/*    column-gap: 16px;*/
+/*    grid-template-columns: 1fr 1fr 1fr;*/
+/*    grid-template-rows: 50px 150px 150px ;*/
+/*    grid-template-areas:*/
+/*                        ". c c"*/
+/*                        "b a ."*/
+/*                        "d d d"*/
+/*}*/
+
 body {
-    font-family: 'Lora', serif;
+    display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 50px;
-    /*background-image: url(./backgroundpicture/earth-country.jpg); */
-    display: grid;
-    row-gap: 16px;
-    column-gap: 16px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50px 150px 150px ;
-    grid-template-areas:
-                        ". c c"
-                        ". a ."
-                        "b d ."
+    flex-direction: column;
 }
+
+#listOfCountries {
+    column-count: 3;
+    align-items: center;
+    border-radius: 3px;
+    border: black solid;
+}
+
 
 #worldmap {
     grid-area: a;
@@ -41,6 +55,15 @@ body {
     width: 90px;
     height: 35px;
 }
+
+#nextPage {
+    background-color: white;
+    color: black;
+    border-radius: 12px;
+    width: 90px;
+    height: 35px;
+}
+
 #text_field {
     background-color: white;
     color: blue;
@@ -62,7 +85,28 @@ body {
 
 #country_info_display {
     color: white;
+}
 
+.blue {
+    color: #90A3D0;
+}
+.green {
+    color: #4C824B;
+}
+.red {
+    color: #D14E5B;
+}
+.yellow {
+    color: hsl(47, 100%, 60%);
+}
+.purple {
+    color: #A756BB;
+}
+.black {
+    color: 000000;
+}
+.flag {
+    width: 40px;
 }
 
 

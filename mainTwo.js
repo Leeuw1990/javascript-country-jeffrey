@@ -9,9 +9,6 @@ listCountry = document.getElementById('listOfCountries');
 
 
 async function getCountry () {
-
-
-
     try {
         const url = `https://restcountries.eu/rest/v2/all`;
         const responseTwo = await axios.get(url)
@@ -30,26 +27,21 @@ async function getCountry () {
 
             // append flag.
             const appendFlag = document.createElement('img');
-            appendFlag.setAttribute('scr', flag);
-            appendFlag.setAttribute('class', flag);
+            appendFlag.setAttribute('src', flag);
+            appendFlag.setAttribute('class', 'flag');
             countryData.appendChild(appendFlag);
 
             // append name.
             const appendName = document.createElement('span');
-            appendName.setAttribute('class', colorText(region));
             appendName.textContent = name;
+            appendName.setAttribute('class', colorText(region));
             countryData.appendChild(appendName);
 
             // append region
 
             // append population
 
-
-
-            listCountry.appendChild(countryData)
-
-
-
+            listCountry.appendChild(countryData);
         });
 
 
@@ -57,7 +49,7 @@ async function getCountry () {
 
     }
 }
-getCountry()
+getCountry();
 
 // 5. De land-namen moeten worden weergegeven in een kleur die overeenkomt met het continent waar het land in ligt.
 //     Maak hier een aparte functie voor. Een land ligt altijd in één van de volgende vijf contintenten,
@@ -71,17 +63,17 @@ getCountry()
 function colorText (getRegion) {
     switch (getRegion) {
         case 'Africa':
-            return '#889BCB'
+            return 'blue'
         case "Americas":
-            return '#4C824B';
+            return 'green';
         case "Asia":
-            return '#D04E5B';
+            return 'red';
         case "Europa":
-            return '#FFD435';
+            return 'yellow';
         case "Oceania":
-            return "#A653BA";
+            return "purple";
         default:
-            return "#000000"
+            return "black"
     }
 }
 
