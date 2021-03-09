@@ -84,6 +84,10 @@ _Tip:_ als er een ongeldige API call wordt gemaakt, zal de response in het `catc
    Oceania: paars
 Tip: gebruik de Color Picker extensie om erachter te komen welke kleuren er op de afbeelding staan.
 
-6. Bonus: Zet een event listener op elk land, zodat als de gebruiker op dat land klikt, de populatie eronder tevoorschijn komt. Zorg er ook voor dat als de gebruiker op een land klikt waarbij deze informatie al zichtbaar is, de informatie weer verdwijnt. Tip: je hebt een unieke ID nodig voor elk tekst-element met populatie-informatie
+6.  Bonus: Zet een event listener op elk land, zodat als de gebruiker op dat land klikt, 
+    de populatie eronder tevoorschijn komt. Zorg er ook voor dat als de gebruiker
+    op een land klikt waarbij deze informatie al zichtbaar is, 
+    de informatie weer verdwijnt. Tip: je hebt een unieke ID nodig voor elk tekst-element met
+    populatie-informatie
 
 7. Bonus: Zorg ervoor dat de styling aansluit bij de styling op de home-pagina

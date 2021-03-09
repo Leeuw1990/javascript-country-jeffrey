@@ -22,6 +22,11 @@ body {
     align-items: center;
     flex-direction: column;
 }
+
+#wereldbol {
+    padding: 40px;
+}
+
 /*Alle 250 landen op de population page */
 #listOfCountries {
     column-count: 3;
@@ -65,6 +70,8 @@ body {
 
 #country_info_display {
     color: black;
+    align-items: center;
+    width: 350px;
 }
 
 /*Geeft de kleur van de tekst per regio*/

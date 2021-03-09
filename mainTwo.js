@@ -7,7 +7,6 @@
 
 listCountry = document.getElementById('listOfCountries');
 
-
 async function getCountry () {
     try {
         const url = `https://restcountries.eu/rest/v2/all`;
@@ -15,49 +14,30 @@ async function getCountry () {
         const {data} = responseTwo
 
         data.sort((lowPop, highPop) => {
-            return lowPop.population - highPop.population
+            return highPop.population - lowPop.population
         });
 
         data.map((country) => {
-            const {flag, name, region, population} = country
-
+            const {flag, name, region} = country
             const countryData = document.createElement('li');
-            countryData.setAttribute('class', 'country-clickable');
-
             // append flag.
             const appendFlag = document.createElement('img');
             appendFlag.setAttribute('src', flag);
             appendFlag.setAttribute('class', 'flag');
             countryData.appendChild(appendFlag);
-
             // append name.
             const appendName = document.createElement('span');
             appendName.textContent = name;
             appendName.setAttribute('class', colorText(region));
             countryData.appendChild(appendName);
 
-            // append region
-
-            // append population
-
             listCountry.appendChild(countryData);
         });
-
-
         } catch (error){
 
     }
 }
 getCountry();
-
-// 5. De land-namen moeten worden weergegeven in een kleur die overeenkomt met het continent waar het land in ligt.
-//     Maak hier een aparte functie voor. Een land ligt altijd in één van de volgende vijf contintenten,
-//     maar een uitzondering kan voorkomen:
-//     Africa: blauw
-//      Americas: groen
-//      Asia: rood
-//      Europe: geel
-//      Oceania: paars
 
 function colorText (getRegion) {
     switch (getRegion) {
