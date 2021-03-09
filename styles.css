@@ -22,32 +22,14 @@ body {
     align-items: center;
     flex-direction: column;
 }
-
+/*Alle 250 landen op de population page */
 #listOfCountries {
     column-count: 3;
     align-items: center;
     border-radius: 3px;
     border: black solid;
 }
-
-
-#worldmap {
-    grid-area: a;
-}
-
-#listOfCountries {
-    grid-area: d;
-}
-
-#countryFlagImg {
-    grid-area: d;
-}
-
-#header {
-    grid-area: c;
-    color: white;
-}
-
+/*Zoek knop op home*/
 #search_button {
     background-color: white;
     color: black;
@@ -55,7 +37,7 @@ body {
     width: 90px;
     height: 35px;
 }
-
+/*Knop om naar home en popultion pagina te gaan*/
 #nextPage {
     background-color: white;
     color: black;
@@ -64,6 +46,7 @@ body {
     height: 35px;
 }
 
+/* Zoek veld om in te typen */
 #text_field {
     background-color: white;
     color: blue;
@@ -72,10 +55,7 @@ body {
     height: 30px;
     align-items: center;
 }
-#knop {
-    grid-area: a;
-}
-
+/*Hier zit de country info, error en flag in op de home page*/
 #group {
     grid-area: b;
     flex: border-box;
@@ -84,9 +64,10 @@ body {
 }
 
 #country_info_display {
-    color: white;
+    color: black;
 }
 
+/*Geeft de kleur van de tekst per regio*/
 .blue {
     color: #90A3D0;
 }
@@ -97,13 +78,13 @@ body {
     color: #D14E5B;
 }
 .yellow {
-    color: hsl(47, 100%, 60%);
+    color: #FFD435;
 }
 .purple {
     color: #A756BB;
 }
 .black {
-    color: 000000;
+    color: #020202;
 }
 .flag {
     width: 40px;

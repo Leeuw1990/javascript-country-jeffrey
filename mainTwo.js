@@ -24,7 +24,6 @@ async function getCountry () {
             const countryData = document.createElement('li');
             countryData.setAttribute('class', 'country-clickable');
 
-
             // append flag.
             const appendFlag = document.createElement('img');
             appendFlag.setAttribute('src', flag);
@@ -68,7 +67,7 @@ function colorText (getRegion) {
             return 'green';
         case "Asia":
             return 'red';
-        case "Europa":
+        case "Europe":
             return 'yellow';
         case "Oceania":
             return "purple";
