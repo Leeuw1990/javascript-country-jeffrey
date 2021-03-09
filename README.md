@@ -64,3 +64,26 @@ _Tip:_ als er een ongeldige API call wordt gemaakt, zal de response in het `catc
 13. Zorg ervoor dat als je na een ongeldige API call weer een geldige API call maakt, de foutmelding verdwenen is.
 
 14. **Bonusopdracht:** make it look nice! 😍
+
+///////////////////////////////////////////////
+
+1. Maak een nieuwe HTML-pagina aan en link daar naartoe vanaf de home-pagina.
+   Maak ook een nieuw JavaScript bestand aan en link die aan de nieuwe pagina. 
+   Koppel ook het bestaande CSS bestand hieraan. V
+2. Maak een functie die alle landen ophaalt en sorteert op grootte van de populatie, van laag naar hoog. V
+3. Zorg ervoor dat er een lijst met land-namen en de bijbehorende vlag in de DOM wordt geplaatst. 
+   Gebruik hierbij destructuring om de properties aan te spreken.
+4. Plaats de landkaart world_map.png (te vinden in de assets map) bovenaan de pagina.
+5. De land-namen moeten worden weergegeven in een kleur die overeenkomt met het continent waar het land in ligt. 
+   Maak hier een aparte functie voor. Een land ligt altijd in één van de volgende vijf contintenten, 
+   maar een uitzondering kan voorkomen:
+   Africa: blauw
+   Americas: groen
+   Asia: rood
+   Europe: geel
+   Oceania: paars
+Tip: gebruik de Color Picker extensie om erachter te komen welke kleuren er op de afbeelding staan.
+
+6. Bonus: Zet een event listener op elk land, zodat als de gebruiker op dat land klikt, de populatie eronder tevoorschijn komt. Zorg er ook voor dat als de gebruiker op een land klikt waarbij deze informatie al zichtbaar is, de informatie weer verdwijnt. Tip: je hebt een unieke ID nodig voor elk tekst-element met populatie-informatie
+
+7. Bonus: Zorg ervoor dat de styling aansluit bij de styling op de home-pagina

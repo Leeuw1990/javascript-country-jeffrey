@@ -5,7 +5,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 50px;
-    background-image: url(./backgroundpicture/earth-country.jpg);
+    /*background-image: url(./backgroundpicture/earth-country.jpg); */
     display: grid;
     row-gap: 16px;
     column-gap: 16px;
@@ -14,7 +14,19 @@ body {
     grid-template-areas:
                         ". c c"
                         ". a ."
-                        "b . ."
+                        "b d ."
+}
+
+#worldmap {
+    grid-area: a;
+}
+
+#listOfCountries {
+    grid-area: d;
+}
+
+#countryFlagImg {
+    grid-area: d;
 }
 
 #header {
