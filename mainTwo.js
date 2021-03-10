@@ -1,13 +1,9 @@
-// 2. Maak een functie die alle landen ophaalt en sorteert op grootte van de populatie, van laag naar hoog.
-
-// 1 [] Maak een functie
-// 2 [] Haal met axios populatie land op.
-// 3 [] Gebruik sort om populatie van laag naar hoog op te halen.
-// 4 [] return de waarde
 
 listCountry = document.getElementById('listOfCountries');
 
 async function getCountry () {
+    const errorTextpop = document.getElementById("errorMessage");
+    errorTextpop.textContent = "";
     try {
         const url = `https://restcountries.eu/rest/v2/all`;
         const responseTwo = await axios.get(url)
@@ -16,9 +12,8 @@ async function getCountry () {
         data.sort((lowPop, highPop) => {
             return highPop.population - lowPop.population
         });
-
         data.map((country) => {
-            const {flag, name, region} = country
+            const {flag, name, region} = country;
             const countryData = document.createElement('li');
             // append flag.
             const appendFlag = document.createElement('img');
@@ -30,11 +25,11 @@ async function getCountry () {
             appendName.textContent = name;
             appendName.setAttribute('class', colorText(region));
             countryData.appendChild(appendName);
-
             listCountry.appendChild(countryData);
         });
-        } catch (error){
 
+        } catch (error) {
+             errorTextpop.textContent = `Er gaat iets fout!`;
     }
 }
 getCountry();
@@ -42,7 +37,7 @@ getCountry();
 function colorText (getRegion) {
     switch (getRegion) {
         case 'Africa':
-            return 'blue'
+            return 'blue';
         case "Americas":
             return 'green';
         case "Asia":
@@ -52,7 +47,7 @@ function colorText (getRegion) {
         case "Oceania":
             return "purple";
         default:
-            return "black"
+            return "black";
     }
 }
 

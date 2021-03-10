@@ -1,30 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
 
-/*body {*/
-/*    font-family: 'Lora', serif;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*    padding: 50px;*/
-/*    !*background-image: url(./backgroundpicture/earth-country.jpg); *!*/
-/*    display: grid;*/
-/*    row-gap: 16px;*/
-/*    column-gap: 16px;*/
-/*    grid-template-columns: 1fr 1fr 1fr;*/
-/*    grid-template-rows: 50px 150px 150px ;*/
-/*    grid-template-areas:*/
-/*                        ". c c"*/
-/*                        "b a ."*/
-/*                        "d d d"*/
-/*}*/
-
-body {
+#worldmap {
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    justify-content: center;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+}
+
+#knop {
+    display: flex;
+    justify-content: center;
 }
 
 #wereldbol {
+    display: flex;
     padding: 40px;
+    align-items: center;
+    justify-content: center;
 }
 
 /*Alle 250 landen op de population page */
@@ -36,7 +31,7 @@ body {
 }
 /*Zoek knop op home*/
 #search_button {
-    background-color: white;
+    background-color: hsl(218, 100%, 84%);
     color: black;
     border-radius: 12px;
     width: 90px;
@@ -44,11 +39,22 @@ body {
 }
 /*Knop om naar home en popultion pagina te gaan*/
 #nextPage {
-    background-color: white;
+    background-color: hsl(218, 100%, 84%);
     color: black;
     border-radius: 12px;
     width: 90px;
     height: 35px;
+}
+
+#showPicture {
+    display: flex;
+    align-items: center;
+}
+
+#country_info_display {
+    display: flex;
+    align-items: center;
+    width: 400px;
 }
 
 /* Zoek veld om in te typen */
@@ -58,22 +64,9 @@ body {
     border-radius: 12px;
     width: 150px;
     height: 30px;
-    align-items: center;
+    align-content: center;
 }
 /*Hier zit de country info, error en flag in op de home page*/
-#group {
-    grid-area: b;
-    flex: border-box;
-    flex-direction: column;
-    justify-items: left;
-}
-
-#country_info_display {
-    color: black;
-    align-items: center;
-    width: 350px;
-}
-
 /*Geeft de kleur van de tekst per regio*/
 .blue {
     color: #90A3D0;
@@ -96,5 +89,7 @@ body {
 .flag {
     width: 40px;
 }
+
+
 
 
